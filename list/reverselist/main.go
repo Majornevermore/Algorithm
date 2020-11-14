@@ -5,18 +5,18 @@ import (
 	. "github.com/isdamir/gotype"
 )
 
-func ReverseList(node* LNode)  {
+func ReverseList(node *LNode) {
 	if node == nil || node.Next == nil {
 		return
 	}
 	var pre *LNode
-	var cur *LNode
-	next := node.Next
-	for next != nil {
-		cur = next.Next
-		next.Next = pre
-		pre = next
-		next = cur
+	var next *LNode
+	cur := node.Next
+	for cur != nil {
+		next = cur.Next
+		cur.Next = pre
+		pre = cur
+		cur = next
 	}
 	node.Next = pre
 }
@@ -28,15 +28,15 @@ func RecursiveChild(node *LNode) *LNode {
 	newHead := RecursiveChild(node)
 	node.Next.Next = node
 	node.Next = nil
-	return  newHead
+	return newHead
 }
 
-func Recursive(node *LNode)  {
+func Recursive(node *LNode) {
 	firsetNode := node.Next
 	newHead := RecursiveChild(firsetNode)
 	node.Next = newHead
 }
-func InsertReverseList(node* LNode) {
+func InsertReverseList(node *LNode) {
 	if node == nil || node.Next == nil {
 		return
 	}
@@ -59,7 +59,6 @@ func Modify(p *int) {
 	*p = 1
 }
 
-
 func ModiyMap(p map[string]int) {
 	fmt.Printf("函数接受的map内存地址是%p\n", &p)
 	p["zhangsan"] = 10
@@ -79,12 +78,25 @@ type Person struct {
 	Name string
 }
 
+func DeleteNode(head *LNode, value int) {
+	cur := head
+	for cur.Next != nil {
+		if value == cur.Next.Data {
+			cur.Next = cur.Next.Next
+		} else {
+			cur = cur.Next
+		}
+	}
+}
+
 func main() {
 	s := &LNode{}
-	CreateNode(s, 8)
+	CreateNode(s, 100)
 
 	PrintNode("翻转前", s)
-	InsertReverseList(s)
+	ReverseList(s)
+	PrintNode("翻转后的", s)
+	DeleteNode(s, 99)
 	PrintNode("翻转后的", s)
 	//v := 2
 	//p := &v
