@@ -43,15 +43,15 @@ package main
 // grid[i][j] 的值为 '0' 或 '1'
 //
 // Related Topics 深度优先搜索 广度优先搜索 并查集
-// 👍 860 👎 0
+// 👍 861 👎 0
 
 //leetcode submit region begin(Prohibit modification and deletion)
-var d = [4][2]int{{0, 1}, {1, 0}, {0, -1}, {-1, 0}}
-var m, n int
+var d = [4][2]int{{-1, 0}, {1, 0}, {0, -1}, {0, 1}}
 var visited [][]int
+var xMax, yMax int
 
-func InArea(x, y int) bool {
-	return x < m && y < n && x >= 0 && y >= 0
+func inArea(x, y int) bool {
+	return x < xMax && y < yMax && x >= 0 && y >= 0
 }
 
 func dfs(grid [][]byte, startX, startY int) {
@@ -59,25 +59,25 @@ func dfs(grid [][]byte, startX, startY int) {
 	for i := 0; i < 4; i++ {
 		newX := startX + d[i][0]
 		newY := startY + d[i][1]
-		if InArea(newX, newY) && visited[newX][newY] != 1 && grid[newX][newY] == '1' {
+		if inArea(newX, newY) && grid[newX][newY] == '1' && visited[newX][newY] != 1 {
 			dfs(grid, newX, newY)
 		}
 	}
-	return
 }
+
 func numIslands(grid [][]byte) int {
-	m = len(grid)
-	if m == 0 {
+	if len(grid) == 0 {
 		return 0
 	}
-	n = len(grid[0])
-	visited = make([][]int, m)
-	for i := range visited {
-		visited[i] = make([]int, n)
-	}
+	xMax = len(grid)
+	yMax = len(grid[0])
 	var res int
-	for i := 0; i < m; i++ {
-		for j := 0; j < n; j++ {
+	visited = make([][]int, xMax)
+	for i := range visited {
+		visited[i] = make([]int, yMax)
+	}
+	for i := 0; i < xMax; i++ {
+		for j := 0; j < yMax; j++ {
 			if grid[i][j] == '1' && visited[i][j] != 1 {
 				res++
 				dfs(grid, i, j)
