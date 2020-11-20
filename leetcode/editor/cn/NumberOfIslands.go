@@ -50,7 +50,7 @@ var d = [4][2]int{{-1, 0}, {1, 0}, {0, -1}, {0, 1}}
 var visited [][]int
 var xMax, yMax int
 
-func inArea(x, y int) bool {
+func inArea1(x, y int) bool {
 	return x < xMax && y < yMax && x >= 0 && y >= 0
 }
 
@@ -59,7 +59,7 @@ func dfs(grid [][]byte, startX, startY int) {
 	for i := 0; i < 4; i++ {
 		newX := startX + d[i][0]
 		newY := startY + d[i][1]
-		if inArea(newX, newY) && grid[newX][newY] == '1' && visited[newX][newY] != 1 {
+		if inArea1(newX, newY) && grid[newX][newY] == '1' && visited[newX][newY] != 1 {
 			dfs(grid, newX, newY)
 		}
 	}
