@@ -19,10 +19,10 @@ package main
 // 👍 407 👎 0
 
 //leetcode submit region begin(Prohibit modification and deletion)
-var mem []int
+var memInter []int
 
 func integerBreak1(n int) int {
-	mem = make([]int, n+1)
+	memInter = make([]int, n+1)
 	return breakInteger(n)
 }
 func max3(a, b, c int) int {
@@ -45,26 +45,26 @@ func breakInteger(n int) int {
 		return 1
 	}
 	res := -1
-	if mem[n] != 0 {
-		return mem[n]
+	if memInter[n] != 0 {
+		return memInter[n]
 	}
 	for i := 1; i <= n-1; i++ {
 		res = max3(res, i*(n-i), i*breakInteger(n-i))
 	}
-	mem[n] = res
+	memInter[n] = res
 	return res
 }
 
 //动态规划，自底向上
 func integerBreak(n int) int {
-	mem = make([]int, n+1)
-	mem[0] = 1
+	memInter = make([]int, n+1)
+	memInter[0] = 1
 	for i := 2; i <= n; i++ {
 		for j := 1; j <= i-1; j++ {
-			mem[i] = max3(mem[i], j*(i-j), j*mem[i-j])
+			memInter[i] = max3(memInter[i], j*(i-j), j*memInter[i-j])
 		}
 	}
-	return mem[n]
+	return memInter[n]
 }
 
 //leetcode submit region end(Prohibit modification and deletion)
