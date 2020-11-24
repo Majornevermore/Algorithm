@@ -1,5 +1,7 @@
 package main
 
+import "sort"
+
 //假设你是一位很棒的家长，想要给你的孩子们一些小饼干。但是，每个孩子最多只能给一块饼干。
 //
 // 对每个孩子 i，都有一个胃口值 g[i]，这是能让孩子们满足胃口的饼干的最小尺寸；并且每块饼干 j，都有一个尺寸 s[j] 。如果 s[j] >= g[i
@@ -41,11 +43,37 @@ package main
 // 👍 217 👎 0
 
 //leetcode submit region begin(Prohibit modification and deletion)
-func findContentChildren(g []int, s []int) int {
 
+// 自定义的 Reverse 类型
+type Reverse struct {
+	sort.Interface // 这样， Reverse 可以接纳任何实现了 sort.Interface (包括 Len, Less, Swap 三个方法) 的对象
+}
+
+// Reverse 只是将其中的 Inferface.Less 的顺序对调了一下
+func (r Reverse) Less(i, j int) bool {
+	return r.Interface.Less(j, i)
+}
+
+func findContentChildren(g []int, s []int) int {
+	sort.Ints(g)
+	sort.Ints(s)
+	res := 0
+	gLen := len(g) - 1
+	sLen := len(s) - 1
+	for gLen >= 0 && sLen >= 0 {
+		if g[gLen] <= s[sLen] {
+			sLen--
+			res++
+		}
+		gLen--
+	}
+	return res
 }
 
 //leetcode submit region end(Prohibit modification and deletion)
 
 func main() {
+	g := []int{10, 9, 8, 7}
+	s := []int{5, 6, 7, 8}
+	findContentChildren(g, s)
 }
