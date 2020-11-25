@@ -20,15 +20,24 @@ func fib(n int) int64 {
 	return memo[n]
 }
 
+func fibDp(n int) int64 {
+	memo[1] = 1
+	memo[2] = 1
+	for i := 3; i <= n; i++ {
+		memo[i] = memo[i-1] + memo[i-2]
+	}
+	return memo[n]
+}
+
 func main() {
 	time1 := time.Now()
-	n := 200
+	n := 10
 	memo = make([]int64, n+1)
 	for i := 0; i <= n; i++ {
 		memo[i] = -1
 	}
 
-	res := fib(n)
+	res := fibDp(n)
 	time2 := time.Now().Sub(time1)
 	fmt.Println(res, "time", time2)
 }
