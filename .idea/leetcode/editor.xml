@@ -19,6 +19,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/BinaryTreeLevelOrderTraversal.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/BinaryTreeLevelOrderTraversal.go" />
+              <option name="questionId" value="102" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/ClimbingStairs.go">
           <value>
             <LeetcodeEditor>
@@ -91,6 +99,30 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/LruCache.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/LruCache.go" />
+              <option name="questionId" value="146" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/MaximumDepthOfBinaryTree.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/MaximumDepthOfBinaryTree.go" />
+              <option name="questionId" value="104" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/MinimumDepthOfBinaryTree.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/MinimumDepthOfBinaryTree.go" />
+              <option name="questionId" value="111" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/MinimumPathSum.go">
           <value>
             <LeetcodeEditor>
@@ -120,6 +152,22 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/PerfectSquares.go" />
               <option name="questionId" value="279" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/PowxN.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/PowxN.go" />
+              <option name="questionId" value="50" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/ReverseInteger.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/ReverseInteger.go" />
+              <option name="questionId" value="7" />
             </LeetcodeEditor>
           </value>
         </entry>
