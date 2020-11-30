@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+
 	. "github.com/isdamir/gotype"
 )
 
@@ -89,7 +90,16 @@ func DeleteNode(head *LNode, value int) {
 	}
 }
 
+func Demo() {
+	c := []int{1, 2, 4}
+	for i := range c {
+		c = append(c, i)
+	}
+	fmt.Println(c)
+}
+
 func main() {
+	Demo()
 	s := &LNode{}
 	CreateNode(s, 100)
 

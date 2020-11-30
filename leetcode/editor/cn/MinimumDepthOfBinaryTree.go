@@ -67,4 +67,5 @@ func minDepth(root *TreeNode) int {
 //leetcode submit region end(Prohibit modification and deletion)
 
 func main() {
+
 }
