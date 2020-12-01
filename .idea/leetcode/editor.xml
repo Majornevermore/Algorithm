@@ -75,6 +75,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/CountCompleteTreeNodes.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/CountCompleteTreeNodes.go" />
+              <option name="questionId" value="222" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/DecodeWays.go">
           <value>
             <LeetcodeEditor>
