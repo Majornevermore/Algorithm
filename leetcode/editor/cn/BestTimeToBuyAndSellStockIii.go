@@ -35,26 +35,19 @@ package main
 func maxProfit(prices []int) int {
 	n := len(prices)
 	dp := make([][3][2]int, len(prices))
-	dp[0][0][0] = 0
-	dp[0][0][1] = -prices[0]
-	dp[0][1][0] = 0
-	dp[0][1][1] = -prices[0]
-	dp[0][2][0] = 0
-	dp[0][2][1] = -prices[0]
-	for i := 1; i < n; i++ {
-		// dp[i][0][0]相当于初始状态，它只能从初始状态转换来
-		dp[i][0][0] = dp[i-1][0][0]
-		// 处理第一次买入、第一次卖出
-		dp[i][0][1] = maxp1(dp[i-1][0][1], dp[i-1][0][0]-prices[i])
-		dp[i][1][0] = maxp1(dp[i-1][1][0], dp[i-1][0][1]+prices[i])
-		// 处理第二次买入、第二次卖出
-		dp[i][1][1] = maxp1(dp[i-1][1][1], dp[i-1][1][0]-prices[i])
-		dp[i][2][0] = maxp1(dp[i-1][2][0], dp[i-1][1][1]+prices[i])
+	intMax := 2
+	for i := 0; i < n; i++ {
+		for k := intMax; k >= 1; k-- {
+			if i-1 == -1 {
+				dp[i][k][0] = 0
+				dp[i][k][1] = -prices[i]
+				continue
+			}
+			dp[i][k][0] = maxp1(dp[i-1][k][0], dp[i-1][k][1]+prices[i])
+			dp[i][k][1] = maxp1(dp[i-1][k-1][0]-prices[i], dp[i-1][k][1])
+		}
 	}
-	//返回最大值
-	a := maxp1(dp[n-1][0][0], dp[n-1][0][1])
-	b := maxp1(dp[n-1][1][0], dp[n-1][1][1])
-	return maxp1(maxp1(a, b), dp[n-1][2][0])
+	return dp[n-1][intMax][0]
 }
 func maxp1(x, y int) int {
 	if x > y {
