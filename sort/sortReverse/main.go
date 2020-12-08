@@ -43,23 +43,31 @@ func (c customSort) Swap(i, j int) {
 }
 
 func main() {
-	sort.Sort(customSort{
-		t: tracks,
-		less: func(x, y *Track) bool {
-			if x.Title != y.Title {
-				return x.Title < y.Title
-			}
-			if x.Year != y.Year {
-				return x.Year < y.Year
-			}
-			if x.Length != y.Length {
-				return x.Length < y.Length
-			}
-			return false
-		},
+	//sort.Sort(customSort{
+	//	t: tracks,
+	//	less: func(x, y *Track) bool {
+	//		if x.Title != y.Title {
+	//			return x.Title < y.Title
+	//		}
+	//		if x.Year != y.Year {
+	//			return x.Year < y.Year
+	//		}
+	//		if x.Length != y.Length {
+	//			return x.Length < y.Length
+	//		}
+	//		return false
+	//	},
+	//})
+	//const format = "\t%v\t%v\t%v\t%v\t%v\t\n"
+	//for _, t := range tracks {
+	//	fmt.Printf(format, t.Title, t.Artist, t.Album, t.Year, t.Length)
+	//}
+	s := [][]int{{1, 2}, {12, 13}, {23, 22}}
+	sort.SliceIsSorted(s, func(i, j int) bool {
+		if s[i][0] != s[j][0] {
+			return s[i][0] < s[j][0]
+		}
+		return s[i][0] > s[j][0]
 	})
-	const format = "\t%v\t%v\t%v\t%v\t%v\t\n"
-	for _, t := range tracks {
-		fmt.Printf(format, t.Title, t.Artist, t.Album, t.Year, t.Length)
-	}
+	fmt.Println(s)
 }
