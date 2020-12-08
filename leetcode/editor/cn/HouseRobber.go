@@ -57,26 +57,17 @@ func tryRob(nums []int, index int) int {
 	return res
 }
 
-func rob(nums []int) int {
-	mem = make([]int, len(nums))
-	//return tryRob(nums, 0)
-	n := len(nums)
-	if n == 0 {
-		return 0
+func rob3(nums []int) int {
+	var dp_i_1 int
+	var dp_i_2 int
+	var dp_i int
+	end := len(nums)
+	for i := end - 1; i >= 0; i-- {
+		dp_i = max(dp_i_2+nums[i], dp_i_1)
+		dp_i_2 = dp_i_1
+		dp_i_1 = dp_i
 	}
-	mem[n-1] = nums[n-1]
-	for i := n - 2; i >= 0; i-- {
-		for j := i; j < n; j++ {
-			var temp int
-			if j+2 < n {
-				temp = mem[j+2]
-			} else {
-				temp = 0
-			}
-			mem[i] = max(mem[i], temp+nums[j])
-		}
-	}
-	return mem[0]
+	return dp_i
 }
 
 //leetcode submit region end(Prohibit modification and deletion)

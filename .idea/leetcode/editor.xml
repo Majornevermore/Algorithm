@@ -91,14 +91,6 @@
             </LeetcodeEditor>
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/leetcode/editor/cn/FlattenBinaryTreeToLinkedList.go">
-          <value>
-            <LeetcodeEditor>
-              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/FlattenBinaryTreeToLinkedList.go" />
-              <option name="questionId" value="114" />
-            </LeetcodeEditor>
-          </value>
-        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/HouseRobber.go">
           <value>
             <LeetcodeEditor>
@@ -112,14 +104,6 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/IntegerBreak.go" />
               <option name="questionId" value="343" />
-            </LeetcodeEditor>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/leetcode/editor/cn/InvertBinaryTree.go">
-          <value>
-            <LeetcodeEditor>
-              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/InvertBinaryTree.go" />
-              <option name="questionId" value="226" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -203,14 +187,6 @@
             </LeetcodeEditor>
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/leetcode/editor/cn/PopulatingNextRightPointersInEachNode.go">
-          <value>
-            <LeetcodeEditor>
-              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/PopulatingNextRightPointersInEachNode.go" />
-              <option name="questionId" value="116" />
-            </LeetcodeEditor>
-          </value>
-        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/PowxN.go">
           <value>
             <LeetcodeEditor>
@@ -224,14 +200,6 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/ReverseInteger.go" />
               <option name="questionId" value="7" />
-            </LeetcodeEditor>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/leetcode/editor/cn/TwoSum.go">
-          <value>
-            <LeetcodeEditor>
-              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/TwoSum.go" />
-              <option name="questionId" value="1" />
             </LeetcodeEditor>
           </value>
         </entry>
