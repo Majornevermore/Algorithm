@@ -56,7 +56,7 @@ func tryPartition(nums []int, index, sum int) bool {
 	return memeCan[index][sum] == 1
 }
 
-func canPartition(nums []int) bool {
+func canPartitionDP(nums []int) bool {
 	sum := 0
 	for i := range nums {
 		sum += nums[i]
@@ -74,6 +74,49 @@ func canPartition(nums []int) bool {
 		}
 	}
 	return tryPartition(nums, len(nums)-1, sum/2)
+}
+
+func canPartition(nums []int) bool {
+	var memdp [][]bool
+	sum, max := 0, 0
+	n := len(nums)
+	if n < 2 {
+		return false
+	}
+
+	for i := range nums {
+		if max < nums[i] {
+			max = nums[i]
+		}
+		sum += nums[i]
+	}
+	target := sum % 2
+	if target != 0 {
+		return false
+	}
+	target = sum / 2
+	if max > target {
+		return false
+	}
+	memdp = make([][]bool, n)
+	for i := range memdp {
+		memdp[i] = make([]bool, target+1)
+	}
+	for i := 0; i < n; i++ {
+		memdp[i][0] = true
+	}
+	memdp[0][nums[0]] = true
+	for i := 1; i < n; i++ {
+		v := nums[i]
+		for j := 1; j <= target; j++ {
+			if j < v {
+				memdp[i][j] = memdp[i-1][j]
+			} else {
+				memdp[i][j] = memdp[i-1][j] || memdp[i-1][j-v]
+			}
+		}
+	}
+	return memdp[n-1][target]
 }
 
 //leetcode submit region end(Prohibit modification and deletion)
