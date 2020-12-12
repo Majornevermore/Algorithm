@@ -43,6 +43,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/BestTimeToBuyAndSellStockWithTransactionFee.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/BestTimeToBuyAndSellStockWithTransactionFee.go" />
+              <option name="questionId" value="714" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/BinaryTreeLevelOrderTraversal.go">
           <value>
             <LeetcodeEditor>
@@ -152,6 +160,30 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/MaximumDepthOfBinaryTree.go" />
               <option name="questionId" value="104" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/MergeKSortedLists.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/MergeKSortedLists.go" />
+              <option name="questionId" value="23" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/MergeSortedArray.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/MergeSortedArray.go" />
+              <option name="questionId" value="88" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/MergeTwoSortedLists.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/MergeTwoSortedLists.go" />
+              <option name="questionId" value="21" />
             </LeetcodeEditor>
           </value>
         </entry>
