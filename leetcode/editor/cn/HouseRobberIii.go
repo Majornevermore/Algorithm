@@ -44,13 +44,13 @@ package main
  * }
  */
 
-var hashmap = make(map[*TreeNode]int)
+var hashmapTree = make(map[*TreeNode]int)
 
 func rob(root *TreeNode) int {
 	if root == nil {
 		return 0
 	}
-	if v, ok := hashmap[root]; ok {
+	if v, ok := hashmapTree[root]; ok {
 		return v
 	}
 	var rob_yes int
@@ -66,7 +66,7 @@ func rob(root *TreeNode) int {
 	rob_yes = rob_left + rob_right + root.Val
 	rob_not = rob(root.Right) + rob(root.Left)
 	value := maxRobb(rob_yes, rob_not)
-	hashmap[root] = value
+	hashmapTree[root] = value
 	return value
 }
 
