@@ -45,7 +45,31 @@ package main
 
 //leetcode submit region begin(Prohibit modification and deletion)
 func longestCommonSubsequence(text1 string, text2 string) int {
+	m, n := len(text1), len(text2)
+	if m == 0 || n == 0 {
+		return 0
+	}
+	dp := make([][]int, m+1)
+	for i := range dp {
+		dp[i] = make([]int, n+1)
+	}
+	for i := 1; i <= m; i++ {
+		for j := 1; j <= n; j++ {
+			if text1[i-1] == text2[j-1] {
+				dp[i][j] = dp[i-1][j-1] + 1
+			} else {
+				dp[i][j] = maxlc(dp[i-1][j], dp[i][j-1])
+			}
+		}
+	}
+	return dp[m][n]
+}
 
+func maxlc(x, y int) int {
+	if x < y {
+		return y
+	}
+	return x
 }
 
 //leetcode submit region end(Prohibit modification and deletion)
