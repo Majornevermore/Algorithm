@@ -18,7 +18,7 @@ package main
 //
 // 假设你总是可以到达数组的最后一个位置。
 // Related Topics 贪心算法 数组
-// 👍 767 👎 0
+// 👍 771 👎 0
 
 //leetcode submit region begin(Prohibit modification and deletion)
 func jump(nums []int) int {
