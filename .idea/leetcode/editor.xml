@@ -99,6 +99,30 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/DeleteOperationForTwoStrings.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/DeleteOperationForTwoStrings.go" />
+              <option name="questionId" value="583" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/DeleteOperationForTwoStrings_583.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/DeleteOperationForTwoStrings_583.go" />
+              <option name="questionId" value="583" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/FactorialTrailingZeroes_172.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/FactorialTrailingZeroes_172.go" />
+              <option name="questionId" value="172" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/HouseRobber.go">
           <value>
             <LeetcodeEditor>
