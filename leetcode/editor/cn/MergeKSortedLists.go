@@ -73,6 +73,10 @@ func mergeList(lists []*ListNode, l, r int) *ListNode {
 }
 
 func merge2List(head1, head2 *ListNode) *ListNode {
+	hashmap1 := map[byte]byte{}
+	hashmap1['('] = ')'
+	hashmap1['{'] = '}'
+	hashmap1['['] = ']'
 	var mergeHead *ListNode
 	if head1 == nil {
 		return head2

@@ -1,5 +1,10 @@
 package main
 
+import (
+	"os"
+	"runtime/trace"
+)
+
 //给定一个字符串 s ，找到其中最长的回文子序列，并返回该序列的长度。可以假设 s 的最大长度为 1000 。
 //
 //
@@ -78,4 +83,7 @@ func maxLongest(x, y int) int {
 //leetcode submit region end(Prohibit modification and deletion)
 
 func main() {
+	trace.Start(os.Stderr)
+	defer trace.Stop()
+	longestPalindromeSubseq("sdjkfajklddakfjkajdf")
 }
