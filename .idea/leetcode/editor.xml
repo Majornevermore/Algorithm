@@ -283,6 +283,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/RandomPickWithBlacklist_710.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/RandomPickWithBlacklist_710.go" />
+              <option name="questionId" value="894" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/ReverseInteger.go">
           <value>
             <LeetcodeEditor>
@@ -296,6 +304,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/ReverseLinkedListIi_92.go" />
               <option name="questionId" value="92" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/SearchInRotatedSortedArray_33.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/SearchInRotatedSortedArray_33.go" />
+              <option name="questionId" value="33" />
             </LeetcodeEditor>
           </value>
         </entry>
