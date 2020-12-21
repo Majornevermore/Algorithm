@@ -299,22 +299,6 @@
             </LeetcodeEditor>
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/leetcode/editor/cn/ReverseNodesInKGroup_25.go">
-          <value>
-            <LeetcodeEditor>
-              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/ReverseNodesInKGroup_25.go" />
-              <option name="questionId" value="25" />
-            </LeetcodeEditor>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/leetcode/editor/cn/ReverseString_344.go">
-          <value>
-            <LeetcodeEditor>
-              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/ReverseString_344.go" />
-              <option name="questionId" value="344" />
-            </LeetcodeEditor>
-          </value>
-        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/SortCharactersByFrequency_451.go">
           <value>
             <LeetcodeEditor>
