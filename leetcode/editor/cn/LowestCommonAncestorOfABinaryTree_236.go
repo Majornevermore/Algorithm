@@ -34,7 +34,7 @@ package main
 // p、q 为不同节点且均存在于给定的二叉树中。
 //
 // Related Topics 树
-// 👍 859 👎 0
+// 👍 874 👎 0
 
 //leetcode submit region begin(Prohibit modification and deletion)
 /**

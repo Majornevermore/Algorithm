@@ -1,5 +1,7 @@
 package main
 
+import "sort"
+
 //给定一个包含非负整数的 m x n 网格 grid ，请找出一条从左上角到右下角的路径，使得路径上的数字总和为最小。
 //
 // 说明：每次只能向下或者向右移动一步。
@@ -66,7 +68,18 @@ func minPathSum(grid [][]int) int {
 	return dp[m-1][n-1]
 }
 
-//leetcode submit region end(Prohibit modification and deletion)
+//leetcode submit regi6on end(Prohibit modification and deletion)
 
+func MoreThanHalfNum_Solution(numbers []int) int {
+	if len(numbers) == 0 {
+		return 0
+	}
+	sort.Slice(numbers, nil)
+	mid := len(numbers) / 2
+	if numbers[mid] != numbers[0] {
+		return 0
+	}
+	return numbers[mid]
+}
 func main() {
 }

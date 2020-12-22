@@ -45,7 +45,7 @@ package main
 // lists[i].length 的总和不超过 10^4
 //
 // Related Topics 堆 链表 分治算法
-// 👍 1041 👎 0
+// 👍 1049 👎 0
 
 //leetcode submit region begin(Prohibit modification and deletion)
 /**
@@ -62,36 +62,32 @@ func mergeKLists(lists []*ListNode) *ListNode {
 	return mergeList(lists, 0, len(lists)-1)
 }
 
-func mergeList(lists []*ListNode, l, r int) *ListNode {
-	m := (l + r) / 2
+func mergeList(list []*ListNode, l, r int) *ListNode {
+	mid := (l + r) / 2
 	if l == r {
-		return lists[l]
+		return list[l]
 	}
-	u := mergeList(lists, l, m)
-	v := mergeList(lists, m+1, r)
-	return merge2List(u, v)
+	u := mergeList(list, l, mid)
+	v := mergeList(list, mid+1, r)
+	return mergeTwoList(u, v)
 }
 
-func merge2List(head1, head2 *ListNode) *ListNode {
-	hashmap1 := map[byte]byte{}
-	hashmap1['('] = ')'
-	hashmap1['{'] = '}'
-	hashmap1['['] = ']'
-	var mergeHead *ListNode
-	if head1 == nil {
-		return head2
+func mergeTwoList(a *ListNode, b *ListNode) *ListNode {
+	var new *ListNode
+	if a == nil {
+		return b
 	}
-	if head2 == nil {
-		return head1
+	if b == nil {
+		return a
 	}
-	if head1.Val < head2.Val {
-		mergeHead = head1
-		mergeHead.Next = merge2List(head1.Next, head2)
+	if a.Val < b.Val {
+		new = a
+		new.Next = mergeTwoList(a.Next, b)
 	} else {
-		mergeHead = head2
-		mergeHead.Next = merge2List(head1, head2.Next)
+		new = b
+		new.Next = mergeTwoList(a, b.Next)
 	}
-	return mergeHead
+	return new
 }
 
 //leetcode submit region end(Prohibit modification and deletion)
