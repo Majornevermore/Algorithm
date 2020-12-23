@@ -43,48 +43,49 @@ package main
 // grid[i][j] 的值为 '0' 或 '1'
 //
 // Related Topics 深度优先搜索 广度优先搜索 并查集
-// 👍 861 👎 0
+// 👍 911 👎 0
 
 //leetcode submit region begin(Prohibit modification and deletion)
-var d = [4][2]int{{-1, 0}, {1, 0}, {0, -1}, {0, 1}}
-var visited [][]int
+var dir = [4][2]int{{-1, 0}, {1, 0}, {0, 1}, {0, -1}}
 var xMax, yMax int
+var visited [][]int
 
-func inArea1(x, y int) bool {
+func numIslands(grid [][]byte) int {
+	m := len(grid)
+	if m == 0 {
+		return 0
+	}
+	n := len(grid[0])
+	xMax, yMax = m, n
+	visited = make([][]int, m)
+	for i := 0; i < len(visited); i++ {
+		visited[i] = make([]int, n)
+	}
+	count := 0
+	for i := 0; i < m; i++ {
+		for j := 0; j < n; j++ {
+			if grid[i][j] == '1' && visited[i][j] != 1 {
+				count++
+				dfs(grid, i, j)
+			}
+		}
+	}
+	return count
+}
+
+func IsAreaValid(x, y int) bool {
 	return x < xMax && y < yMax && x >= 0 && y >= 0
 }
 
 func dfs(grid [][]byte, startX, startY int) {
 	visited[startX][startY] = 1
 	for i := 0; i < 4; i++ {
-		newX := startX + d[i][0]
-		newY := startY + d[i][1]
-		if inArea1(newX, newY) && grid[newX][newY] == '1' && visited[newX][newY] != 1 {
+		newX := startX + dir[i][0]
+		newY := startY + dir[i][1]
+		if IsAreaValid(newX, newY) && grid[newX][newY] == '1' && visited[newX][newY] != 1 {
 			dfs(grid, newX, newY)
 		}
 	}
-}
-
-func numIslands(grid [][]byte) int {
-	if len(grid) == 0 {
-		return 0
-	}
-	xMax = len(grid)
-	yMax = len(grid[0])
-	var res int
-	visited = make([][]int, xMax)
-	for i := range visited {
-		visited[i] = make([]int, yMax)
-	}
-	for i := 0; i < xMax; i++ {
-		for j := 0; j < yMax; j++ {
-			if grid[i][j] == '1' && visited[i][j] != 1 {
-				res++
-				dfs(grid, i, j)
-			}
-		}
-	}
-	return res
 }
 
 //leetcode submit region end(Prohibit modification and deletion)

@@ -145,6 +145,21 @@ func min(i, j int) int {
 	return j
 }
 
+func test() {
+	var res [][]int
+	var df func(a []int, n int)
+	df = func(a []int, n int) {
+		if n == 10 {
+			res = append(res, a)
+		}
+		for i := 0; i < 10; i++ {
+			a = append(a, i)
+			df(a, i+1)
+		}
+	}
+	df([]int{}, 0)
+}
+
 func main() {
-	solve(7, 2)
+	test()
 }

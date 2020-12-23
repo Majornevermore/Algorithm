@@ -1,9 +1,6 @@
 package main
 
-import (
-	"os"
-	"runtime/trace"
-)
+import "fmt"
 
 //给定一个字符串 s ，找到其中最长的回文子序列，并返回该序列的长度。可以假设 s 的最大长度为 1000 。
 //
@@ -44,46 +41,39 @@ import (
 // s 只包含小写英文字母
 //
 // Related Topics 动态规划
-// 👍 341 👎 0
+// 👍 351 👎 0
 
 //leetcode submit region begin(Prohibit modification and deletion)
-var dpLongest [][]int
-
 func longestPalindromeSubseq(s string) int {
-	sl := len(s)
-	dpLongest = make([][]int, sl)
-	for i := 0; i < sl; i++ {
-		dpLongest[i] = make([]int, sl)
+	n := len(s)
+	dp := make([][]int, n)
+	for i := 0; i < n; i++ {
+		dp[i] = make([]int, n)
 	}
-	// i > j 等于0 i== j时就是一个串所以肯定返回1
-	for i := 0; i < sl; i++ {
-		dpLongest[i][i] = 1
+	for i := 0; i < n; i++ {
+		dp[i][i] = 1
 	}
-	for i := sl - 1; i >= 0; i-- {
-		for j := i + 1; j < sl; j++ {
+	for i := n - 1; i >= 0; i-- {
+		for j := i + 1; j < n; j++ {
 			if s[i] == s[j] {
-				dpLongest[i][j] = dpLongest[i+1][j-1] + 2
+				dp[i][j] = dp[i+1][j-1] + 2
 			} else {
-				dpLongest[i][j] = maxLongest(dpLongest[i+1][j], dpLongest[i][j-1])
+				dp[i][j] = max4(dp[i+1][j], dp[i][j-1])
 			}
 		}
 	}
-	return dpLongest[0][sl-1]
-
+	return dp[0][n-1]
 }
 
-func maxLongest(x, y int) int {
-	if x < y {
-		return y
+func max4(i, j int) int {
+	if i < j {
+		return j
 	}
-
-	return x
+	return i
 }
 
 //leetcode submit region end(Prohibit modification and deletion)
 
 func main() {
-	trace.Start(os.Stderr)
-	defer trace.Stop()
-	longestPalindromeSubseq("sdjkfajklddakfjkajdf")
+	fmt.Println(longestPalindromeSubseq("abc1234321ab"))
 }
