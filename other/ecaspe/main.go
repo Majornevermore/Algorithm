@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func LIS(arr []int) []int {
 	maxLen := 0
 	n := len(arr)
@@ -160,6 +162,68 @@ func test() {
 	df([]int{}, 0)
 }
 
+/**
+ * longest common subsequence
+ * @param s1 string字符串 the string
+ * @param s2 string字符串 the string
+ * @return string字符串
+ */
+func LCS(s1 string, s2 string) string {
+	m, n := len(s1), len(s2)
+	dp := make([][]int, m+1)
+	for i := range dp {
+		dp[i] = make([]int, n+1)
+	}
+	for i := 1; i <= m; i++ {
+		for j := 1; j <= n; j++ {
+			if s1[i-1] == s2[j-1] {
+				dp[i][j] = 1 + dp[i-1][j-1]
+			} else {
+				dp[i][j] = maxlc(dp[i-1][j], dp[i][j-1])
+			}
+		}
+	}
+	if dp[m][n] == 0 {
+		return "-1"
+	}
+	var res string
+	i := m - 1
+	j := n - 1
+	for i >= 0 && j >= 0 {
+		if s1[i] == s2[j] {
+			res += string(s1[i])
+			i--
+			j--
+		} else {
+			if dp[i+1][j] >= dp[i][j+1] {
+				j--
+			} else {
+				i--
+			}
+		}
+	}
+	return reverse(res)
+}
+
+func reverse(s string) string {
+	b := []byte(s)
+	left, right := 0, len(s)-1
+	for left < right {
+		b[left], b[right] = b[right], b[left]
+		left++
+		right--
+	}
+	return string(b)
+}
+
+func maxlc(x, y int) int {
+	if x < y {
+		return y
+	}
+	return x
+}
+
 func main() {
-	test()
+	b := LCS("1A2C6D4B560", "B1D23CA45B6A0")
+	fmt.Println(b)
 }

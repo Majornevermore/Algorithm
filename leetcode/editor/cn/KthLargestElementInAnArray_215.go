@@ -27,7 +27,7 @@ import (
 //leetcode submit region begin(Prohibit modification and deletion)
 func findKth(a []int, n int, K int) int {
 	rand.Seed(time.Now().UnixNano())
-	return quickSelect(a, 0, len(a)-1, len(a)-k)
+	return quickSelect(a, 0, n-1, len(a)-K)
 }
 
 func quickSelect(a []int, l, r, index int) int {
@@ -36,9 +36,8 @@ func quickSelect(a []int, l, r, index int) int {
 		return a[q]
 	} else if q > index {
 		quickSelect(a, l, q-1, index)
-	} else {
-		quickSelect(a, q+1, r, index)
 	}
+	return quickSelect(a, q+1, r, index)
 }
 
 func RandomPartition(a []int, l, r int) int {

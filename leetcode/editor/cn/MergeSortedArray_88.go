@@ -32,7 +32,7 @@ package main
 // nums2.length == n
 //
 // Related Topics 数组 双指针
-// 👍 707 👎 0
+// 👍 717 👎 0
 
 //leetcode submit region begin(Prohibit modification and deletion)
 func merge(nums1 []int, m int, nums2 []int, n int) {
