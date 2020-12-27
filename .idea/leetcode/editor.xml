@@ -27,11 +27,35 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/BaShuZiFanYiChengZiFuChuanLcof_剑指 Offer 46.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/BaShuZiFanYiChengZiFuChuanLcof_剑指 Offer 46.go" />
+              <option name="questionId" value="100325" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/BalancedBinaryTree.go">
           <value>
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/BalancedBinaryTree.go" />
               <option name="questionId" value="110" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/BasicCalculatorIi_227.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/BasicCalculatorIi_227.go" />
+              <option name="questionId" value="227" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/BasicCalculator_224.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/BasicCalculator_224.go" />
+              <option name="questionId" value="224" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -88,6 +112,22 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/BinaryTreePaths_257.go" />
               <option name="questionId" value="257" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/CalculatorLcci_面试题 16.26.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/CalculatorLcci_面试题 16.26.go" />
+              <option name="questionId" value="1000027" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/ChouShuLcof_剑指 Offer 49.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/ChouShuLcof_剑指 Offer 49.go" />
+              <option name="questionId" value="100334" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -155,11 +195,27 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/DiameterOfBinaryTree_543.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/DiameterOfBinaryTree_543.go" />
+              <option name="questionId" value="543" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/ErChaShuDeJingXiangLcof_剑指 Offer 27.go">
           <value>
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/ErChaShuDeJingXiangLcof_剑指 Offer 27.go" />
               <option name="questionId" value="100288" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/FindMedianFromDataStream_295.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/FindMedianFromDataStream_295.go" />
+              <option name="questionId" value="295" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -216,6 +272,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/JumpGameIi_45.go" />
               <option name="questionId" value="45" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/KInversePairsArray_629.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/KInversePairsArray_629.go" />
+              <option name="questionId" value="629" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -280,6 +344,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/LongestPalindromicSubsequence_516.go" />
               <option name="questionId" value="516" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/LongestValidParentheses_32.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/LongestValidParentheses_32.go" />
+              <option name="questionId" value="32" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -459,6 +531,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/RestoreIpAddresses_93.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/RestoreIpAddresses_93.go" />
+              <option name="questionId" value="93" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/ReverseInteger.go">
           <value>
             <LeetcodeEditor>
@@ -472,6 +552,22 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/ReverseLinkedListIi_92.go" />
               <option name="questionId" value="92" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/ShuZuZhongDeNiXuDuiLcof_剑指 Offer 51.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/ShuZuZhongDeNiXuDuiLcof_剑指 Offer 51.go" />
+              <option name="questionId" value="100318" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/SlidingWindowMaximum_239.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/SlidingWindowMaximum_239.go" />
+              <option name="questionId" value="239" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -512,6 +608,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/SuperEggDrop_887.go" />
               <option name="questionId" value="923" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/TargetSum_494.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/TargetSum_494.go" />
+              <option name="questionId" value="494" />
             </LeetcodeEditor>
           </value>
         </entry>

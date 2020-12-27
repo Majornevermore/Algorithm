@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"math"
+	"strconv"
+)
 
 func LIS(arr []int) []int {
 	maxLen := 0
@@ -223,7 +226,158 @@ func maxlc(x, y int) int {
 	return x
 }
 
+func helper(s string) int {
+	var num int
+	var sum int
+	var stack []int
+	var flag byte
+	flag = '+'
+	n := len(s)
+	for i := 0; i < n; i++ {
+		var c byte
+		c = s[i]
+		if isNums(s[i]) {
+			num += num*10 + int(c-'0')
+		}
+		if c == ')' {
+			return num
+		}
+		if c == '(' {
+			num = helper(s)
+		}
+		if !isNums(s[i]) || i == n-1 {
+			switch flag {
+			case '+':
+				stack = append(stack, num)
+			case '-':
+				stack = append(stack, -num)
+			case '*':
+				temp := stack[len(stack)-1] * num
+				stack = stack[:len(stack)-1]
+				stack = append(stack, temp)
+			case '/':
+				temp := stack[len(stack)-1] / num
+				stack = stack[:len(stack)-1]
+				stack = append(stack, temp)
+			}
+			flag = c
+			num = 0
+		}
+
+	}
+	sum = Sum(stack)
+	return sum
+}
+
+func Sum(s []int) int {
+	var sum int
+	for i := 0; i < len(s); i++ {
+		sum += s[i]
+	}
+	return sum
+}
+
+func isNums(v byte) bool {
+	if v < '9' && v > '0' {
+		return true
+	}
+	return false
+}
+
+func compare(version1 string, version2 string) int {
+	// write code here
+	v1, v2 := 0, 0
+	index1, index2 := 0, 0
+	for index1 < len(version1) && index2 < len(version2) {
+		v1 = 0
+		v2 = 0
+		for index1 < len(version1) && version1[index1] != ',' {
+			v1 = v1*10 + int(version1[index1]-'0')
+			index1++
+		}
+		index1++
+		for index2 < len(version2) && version2[index2] != ',' {
+			v2 = v2*10 + int(version2[index2]-'0')
+			index2++
+		}
+		index2++
+		if v1 < v2 {
+			return -1
+		} else if v1 > v2 {
+			return 1
+		}
+	}
+	if index1 < len(version1) {
+		return 1
+	} else if index2 < len(version2) {
+		return -1
+	}
+	return 0
+}
+func atoi(str string) int {
+	// write code here
+	sign := 1
+	if len(str) == 0 {
+		return 0
+	}
+	index := 0
+	for str[index] == ' ' {
+		index++
+	}
+	str = str[index:]
+	if str[0] == '-' {
+		sign = -1
+		index++
+	} else if str[0] == '+' {
+		sign = 1
+		index++
+	}
+	str = str[index:]
+	var res int
+	for i := 0; i < len(str); i++ {
+		if isDigit(string(str[i])) {
+			res = res*10 + int(str[i]-'0')
+			if res*sign > math.MaxInt32 {
+				return math.MaxInt32
+			}
+			if res*sign < math.MinInt32 {
+				return math.MinInt32
+			}
+		}
+	}
+	res = res * sign
+	return res
+}
+
+func isDigit(s string) bool {
+	_, err := strconv.Atoi(s)
+	if err != nil {
+		return false
+	}
+	return true
+}
+
+func searchMatrix(matrix [][]int, target int) bool {
+	// write code here
+	m := len(matrix)
+	n := len(matrix[0])
+	if m == 0 || n == 0 {
+		return false
+	}
+	for i := 0; i < m; i++ {
+		if matrix[i][0] >= target && matrix[i][n-1] <= target {
+			for j := 0; j < n; j++ {
+				if matrix[i][j] == target {
+					return true
+				}
+			}
+		}
+	}
+	return false
+}
+
 func main() {
-	b := LCS("1A2C6D4B560", "B1D23CA45B6A0")
-	fmt.Println(b)
+	//fmt.Println(helper("2*(3 +(2-1))"))
+	//compare("224.165", "119.182.224.243")
+	searchMatrix([][]int{{1, 3}}, 1)
 }

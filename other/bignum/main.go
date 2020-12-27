@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"sort"
 	"strconv"
 )
 
@@ -93,9 +94,89 @@ func reverse(str string) string {
 	return result
 }
 
+func permuteUnique(num []int) [][]int {
+	var res [][]int
+	sort.Ints(num)
+	n := len(num)
+	if len(num) == 0 {
+		return res
+	}
+	used := make([]bool, n)
+	var search func([]int, []int)
+	search = func(nums []int, ans []int) {
+		if len(ans) == n {
+			res = append(res, ans)
+		}
+		for i := 0; i < n; i++ {
+			if used[i] {
+				continue
+			}
+			if i > 0 && nums[i-1] == nums[i] && !used[i-1] {
+				continue
+			}
+			used[i] = true
+			ans = append(ans, nums[i])
+			search(nums, ans)
+			used[i] = false
+			ans = ans[:len(ans)-1]
+		}
+	}
+	var ans []int
+	search(num, ans)
+	return res
+}
+
+type Tree struct {
+	val   int
+	Left  *Tree
+	Right *Tree
+}
+
+func solve1(xianxu []int, zhongxu []int) []int {
+	// write code here
+	p := buildTree(xianxu, zhongxu, 0, len(xianxu)-1, 0, len(zhongxu)-1)
+	var res []int
+	if p == nil {
+		return res
+	}
+	var q []*Tree
+	q = append(q, p)
+	for len(q) > 0 {
+		n := len(q)
+		temp := q[0]
+		res = append(res, temp.val)
+		for i := 0; i < n; i++ {
+			temp = q[0]
+			q = q[:1]
+			if temp.Right != nil {
+				q = append(q, temp.Right)
+			}
+			if temp.Left != nil {
+				q = append(q, temp.Right)
+			}
+		}
+	}
+	return res
+}
+
+func buildTree(xianxu, zhongxu []int, le1, ri1, le2, ri2 int) *Tree {
+	if le1 > ri1 || le1-ri1 != le2-ri2 {
+		return nil
+	}
+	index := le2
+	for zhongxu[index] != xianxu[le1] {
+		index++ // 在中序遍历中找到第一个根节点（前序遍历的第一个数）
+	}
+	p := &Tree{val: xianxu[le1]}
+	p.Left = buildTree(xianxu, zhongxu, le1+1, le1+index-le2, le2, index-1)
+	p.Right = buildTree(xianxu, zhongxu, le1+index-le2+1, ri1, index+1, ri2)
+	return p
+}
+
 func main() {
 	//jumpFloor(4)
 	//fmt.Println(maxLength([]int{2, 2, 3, 4, 3}))
 	//fmt.Println(solve("1292", "123"))
-	fmt.Print(isValid("([])"))
+	//fmt.Print(isValid("([])"))
+	permuteUnique([]int{1, 2, 3, 1})
 }
