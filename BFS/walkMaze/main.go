@@ -55,6 +55,10 @@ func walk(maze [][]int, start Point, end Point) [][]int {
 	return steps
 }
 
+func strings() {
+
+}
+
 func main() {
 
 }
