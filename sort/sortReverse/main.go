@@ -71,3 +71,7 @@ func main() {
 	})
 	fmt.Println(s)
 }
+
+func name() {
+
+}
