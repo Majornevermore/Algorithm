@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 type Point struct {
 	i, j int
 }
@@ -58,5 +56,5 @@ func walk(maze [][]int, start Point, end Point) [][]int {
 }
 
 func main() {
-	fmt.Println()
+
 }
