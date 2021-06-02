@@ -1,7 +1,9 @@
 package main
 
 import (
+	"fmt"
 	"sort"
+	"strconv"
 )
 
 func FourSum(nums []int, target int) [][]int {
@@ -63,5 +65,16 @@ func treeSum(nums []int, targetNum int) [][]int {
 }
 
 func main() {
+	ip := ""
+	var ips []string
+	for i := 0; i < 10; i++ {
+		changedIp(&ip, i)
+		//tmp := ip
+		ips = append(ips, ip)
+	}
+	fmt.Println(ips)
+}
 
+func changedIp(ip *string, i int) {
+	*ip = "1992" + strconv.Itoa(i)
 }
